@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand Theft Auto VI - Estado de Leonida</title>
-    <!-- Fonte Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;0,900;1,900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- CSS Externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;0,900;1,900&family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Arquivo CSS Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Nav -->
+    <!-- Fundo de Gradiente Animado Vice City -->
+    <div class="bg-gradient-mesh"></div>
+
+    <!-- Header / Navbar -->
     <header class="navbar">
         <div class="logo">
             <span class="gta-title">GTA <span class="roman-vi">VI</span></span>
@@ -23,31 +26,76 @@
         <nav>
             <ul>
                 <li><a href="#hero">Início</a></li>
+                <li><a href="#trailer">Trailer</a></li>
                 <li><a href="#sobre">O Jogo</a></li>
                 <li><a href="#personagens">Protagonistas</a></li>
-                <li><a href="#leonida">Vice City</a></li>
-                <li><a href="#recursos">Destaques</a></li>
-                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#social-feed">Leonida Live</a></li>
+                <li><a href="#recursos">Recursos</a></li>
             </ul>
         </nav>
-        <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" class="btn-primary btn-nav">
-            <i class="fa-brands fa-youtube"></i> Assista ao Trailer
+        <a href="#trailer" class="btn-primary btn-nav">
+            <i class="fa-solid fa-play"></i> Assistir Trailer
         </a>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-overlay"></div>
+        <div class="hero-glow-orb orb-1"></div>
+        <div class="hero-glow-orb orb-2"></div>
         <div class="hero-content">
-            <span class="badge">BEM-VINDO AO ESTADO DE LEONIDA</span>
-            <h1 class="glitch-text">GRAND THEFT AUTO <span class="gradient-text">VI</span></h1>
-            <p>A maior e mais imersiva evolução da franquia Rockstar Games até hoje. Entre na atmosfera vibrante e perigosa de Vice City.</p>
-            <div class="hero-buttons">
-                <a href="#sobre" class="btn-primary">Explorar O Jogo</a>
-                <a href="#plataformas" class="btn-secondary">Ver Plataformas</a>
+            <div class="badge-neon">
+                <i class="fa-solid fa-bolt"></i> BEM-VINDO AO ESTADO DE LEONIDA
             </div>
-            <div class="release-info">
-                <p><i class="fa-solid fa-calendar-days"></i> Lançamento em <strong>2025</strong></p>
+            <h1 class="main-title">GRAND THEFT AUTO <span class="gradient-text roman-giant">VI</span></h1>
+            <p class="hero-subtitle">Mergulhe nas ruas iluminadas por neon de Vice City e descubra o próximo capítulo revolucionário da Rockstar Games.</p>
+            
+            <div class="hero-buttons">
+                <a href="#trailer" class="btn-primary">
+                    <i class="fa-solid fa-circle-play"></i> Ver Trailer Oficial
+                </a>
+                <a href="#sobre" class="btn-secondary">
+                    <i class="fa-solid fa-compass"></i> Explorar Leonida
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar glass">
+                <div class="stat-item">
+                    <span class="stat-number gradient-text">2025</span>
+                    <span class="stat-label">Lançamento</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">200M+</span>
+                    <span class="stat-label">Views no Trailer</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number gradient-text">4K 60FPS</span>
+                    <span class="stat-label">Próxima Geração</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trailer Section com Player de Vídeo Incorporado -->
+    <section id="trailer" class="section container">
+        <div class="section-header">
+            <span class="sub-badge"><i class="fa-brands fa-youtube"></i> VÍDEO OFICIAL</span>
+            <h2>TRAILER <span class="gradient-text">DE ANÚNCIO</span></h2>
+            <p>Assista ao primeiro vislumbre oficial de Vice City em alta definição.</p>
+            <div class="line-glow"></div>
+        </div>
+
+        <div class="video-container-wrapper glass">
+            <div class="video-responsive">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/QdBZY2fkU-0?rel=0&modestbranding=1" 
+                    title="Grand Theft Auto VI Trailer 1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>
@@ -59,20 +107,26 @@
             <div class="line-glow"></div>
         </div>
         <div class="about-grid">
-            <div class="about-card glass">
-                <div class="card-icon"><i class="fa-solid fa-city"></i></div>
-                <h3>Mundo Vivo & Aberto</h3>
-                <p>O Estado de Leonida abriga as ruas iluminadas por neon de Vice City e áreas rurais circundantes no maior e mais dinâmico mundo já criado na série.</p>
+            <div class="about-card glass glow-card">
+                <div class="card-icon-wrapper">
+                    <i class="fa-solid fa-city"></i>
+                </div>
+                <h3>Mundo Aberto Dinâmico</h3>
+                <p>Leonida é o maior e mais denso mapa da história de GTA, variando de clubes de luxo em Vice City até pântanos perigosos.</p>
             </div>
-            <div class="about-card glass">
-                <div class="card-icon"><i class="fa-solid fa-masks-theater"></i></div>
-                <h3>Narrativa Dupla</h3>
-                <p>Acompanhe a história inspirada na dinâmica de Bonnie e Clyde, focando na cumplicidade, no crime e nas escolhas do casal de protagonistas.</p>
+            <div class="about-card glass glow-card">
+                <div class="card-icon-wrapper">
+                    <i class="fa-solid fa-user-ninja"></i>
+                </div>
+                <h3>A Dupla do Crime</h3>
+                <p>Uma narrativa intensa focada na parceria de Lucia e Jason, combinando assaltos táticos com uma história envolvente.</p>
             </div>
-            <div class="about-card glass">
-                <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-                <h3>Tecnologia Next-Gen</h3>
-                <p>Construído do zero para o hardware moderno com física de fluidos inédita, inteligência artificial avançada e densidade de NPCs incomparável.</p>
+            <div class="about-card glass glow-card">
+                <div class="card-icon-wrapper">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3>Motor RAGE Next-Gen</h3>
+                <p>Física de física de veículos, simulação de água realista, clima dinâmico e densidade populacional sem precedentes.</p>
             </div>
         </div>
     </section>
@@ -81,48 +135,131 @@
     <section id="personagens" class="section bg-darker">
         <div class="container">
             <div class="section-header">
-                <h2>DUPLA <span class="gradient-text">PROTAGONISTA</span></h2>
-                <p>Confiança é tudo no submundo do crime.</p>
+                <h2>OS <span class="gradient-text">PROTAGONISTAS</span></h2>
+                <p>Duas histórias entrelaçadas pelo crime e pela sobrevivência.</p>
                 <div class="line-glow"></div>
             </div>
             <div class="character-grid">
                 <!-- Lucia -->
-                <div class="character-card glass">
-                    <div class="char-img-placeholder char-lucia">
-                        <div class="char-tag">LUCIA</div>
+                <div class="character-card glass glow-card">
+                    <div class="char-banner char-lucia">
+                        <span class="char-tag">LUCIA</span>
+                        <div class="char-overlay-gradient"></div>
                     </div>
                     <div class="char-info">
                         <h3>Lucia</h3>
-                        <p class="char-role">A Primeira Protagonista Feminina da Era HD</p>
-                        <p>Determinada, astuta e disposta a tudo para conquistar sua liberdade. Lucia é a força impulsora por trás dos planos mais arriscados na cidade.</p>
+                        <span class="char-role"><i class="fa-solid fa-shield-halved"></i> Sobrevivente & Estrategista</span>
+                        <p>Astuta e destemida, Lucia busca retomar o controle de sua vida nas ruas imprevisíveis de Vice City, liderando os maiores esquemas.</p>
+                        <div class="char-quote">
+                            <i class="fa-solid fa-quote-left"></i> "A única maneira de sairmos dessa é juntos."
+                        </div>
                     </div>
                 </div>
                 <!-- Jason -->
-                <div class="character-card glass">
-                    <div class="char-img-placeholder char-jason">
-                        <div class="char-tag">JASON</div>
+                <div class="character-card glass glow-card">
+                    <div class="char-banner char-jason">
+                        <span class="char-tag tag-jason">JASON</span>
+                        <div class="char-overlay-gradient"></div>
                     </div>
                     <div class="char-info">
                         <h3>Jason</h3>
-                        <p class="char-role">O Parceiro no Crime</p>
-                        <p>Experiente nas ruas de Vice City, Jason traz habilidade tática, conexões com o submundo local e um passado misterioso.</p>
+                        <span class="char-role"><i class="fa-solid fa-gun"></i> Especialista de Ruas</span>
+                        <p>Com um passado ligado ao submundo e contatos em todo o estado de Leonida, Jason é a força bruta e o piloto da dupla.</p>
+                        <div class="char-quote">
+                            <i class="fa-solid fa-quote-left"></i> "Confiança é tudo o que nós temos."
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leonida / Cenário -->
-    <section id="leonida" class="section container">
-        <div class="leonida-banner glass">
-            <div class="leonida-content">
-                <h2>EXPLORE O ESTADO DE <span class="gradient-text">LEONIDA</span></h2>
-                <p>De praias tropicais a pântanos perigosos repletos de vida selvagem, passando pela vida noturna agitada e a cultura das redes sociais digitais.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check neon-icon"></i> Vida noturna e clubes exclusivos em Vice City</li>
-                    <li><i class="fa-solid fa-check neon-icon"></i> Ecossistema dinâmico de vida selvagem nos pântanos (Kelly County)</li>
-                    <li><i class="fa-solid fa-check neon-icon"></i> Satírica integração de redes sociais e transmissões ao vivo no jogo</li>
-                </ul>
+    <!-- Feed Estilo Mídia Social Leonida -->
+    <section id="social-feed" class="section container">
+        <div class="section-header">
+            <span class="sub-badge"><i class="fa-solid fa-mobile-screen"></i> CULTURA DIGITAL</span>
+            <h2>LEONIDA <span class="gradient-text">LIVE & SOCIAL</span></h2>
+            <p>O GTA VI traz uma paródia afiada das redes sociais modernas integradas ao mundo do jogo.</p>
+            <div class="line-glow"></div>
+        </div>
+
+        <div class="social-feed-grid">
+            <div class="social-card glass">
+                <div class="social-header">
+                    <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <div>
+                        <strong>@ViceBeachLife</strong>
+                        <span class="location">Vice City Beach</span>
+                    </div>
+                    <span class="live-tag">LIVE</span>
+                </div>
+                <div class="social-body-placeholder grid-bg-1">
+                    <i class="fa-solid fa-cloud-sun-rain"></i>
+                    <span>Sol e Caos na Praia</span>
+                </div>
+                <div class="social-footer">
+                    <span><i class="fa-solid fa-heart text-pink"></i> 142.5K</span>
+                    <span><i class="fa-solid fa-comment"></i> 8.9K</span>
+                    <span><i class="fa-solid fa-share"></i> Compartilhar</span>
+                </div>
+            </div>
+
+            <div class="social-card glass">
+                <div class="social-header">
+                    <div class="avatar"><i class="fa-solid fa-hippo"></i></div>
+                    <div>
+                        <strong>@KellyCountyGators</strong>
+                        <span class="location">Kelly County Wetlands</span>
+                    </div>
+                    <span class="live-tag">REELS</span>
+                </div>
+                <div class="social-body-placeholder grid-bg-2">
+                    <i class="fa-solid fa-dragon"></i>
+                    <span>Piscina de Jacarés</span>
+                </div>
+                <div class="social-footer">
+                    <span><i class="fa-solid fa-heart text-pink"></i> 98.2K</span>
+                    <span><i class="fa-solid fa-comment"></i> 4.1K</span>
+                    <span><i class="fa-solid fa-share"></i> Compartilhar</span>
+                </div>
+            </div>
+
+            <div class="social-card glass">
+                <div class="social-header">
+                    <div class="avatar"><i class="fa-solid fa-car-burst"></i></div>
+                    <div>
+                        <strong>@ViceCityThrill</strong>
+                        <span class="location">Downtown Ocean Drive</span>
+                    </div>
+                    <span class="live-tag">TRENDING</span>
+                </div>
+                <div class="social-body-placeholder grid-bg-3">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Encontro de Lowriders Noturno</span>
+                </div>
+                <div class="social-footer">
+                    <span><i class="fa-solid fa-heart text-pink"></i> 310K</span>
+                    <span><i class="fa-solid fa-comment"></i> 18.3K</span>
+                    <span><i class="fa-solid fa-share"></i> Compartilhar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Player Rádio Vice City (Visual) -->
+    <section class="container section">
+        <div class="radio-widget glass">
+            <div class="radio-info">
+                <i class="fa-solid fa-radio radio-icon text-pink"></i>
+                <div>
+                    <h4>RÁDIO VICE CITY VIBES</h4>
+                    <p>Tom Petty - "Love Is A Long Road" (Trilha Sonora Oficial do Trailer 1)</p>
+                </div>
+            </div>
+            <div class="radio-controls">
+                <button class="btn-radio"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="btn-radio play-btn"><i class="fa-solid fa-play"></i></button>
+                <button class="btn-radio"><i class="fa-solid fa-forward-step"></i></button>
             </div>
         </div>
     </section>
@@ -131,72 +268,50 @@
     <section id="recursos" class="section bg-darker">
         <div class="container">
             <div class="section-header">
-                <h2>RECURSOS DA <span class="gradient-text">NOVA GERAÇÃO</span></h2>
+                <h2>TECNOLOGIA <span class="gradient-text">DE PONTA</span></h2>
                 <div class="line-glow"></div>
             </div>
             <div class="features-grid">
-                <div class="feature-box glass">
-                    <i class="fa-solid fa-car-side"></i>
-                    <h4>Personalização Vehicular</h4>
-                    <p>Controle de física aprimorado e opções profundas de modificação de carros e barcos.</p>
+                <div class="feature-box glass glow-card">
+                    <i class="fa-solid fa-gauge-high text-orange"></i>
+                    <h4>Física de Veículos</h4>
+                    <p>Ajuste de suspensão, aerodinâmica e deformação de lataria realista.</p>
                 </div>
-                <div class="feature-box glass">
-                    <i class="fa-solid fa-brain"></i>
-                    <h4>I.A. de NPCs Revolucionária</h4>
-                    <p>Reações realistas e rotinas complexas para os habitantes de Leonida.</p>
+                <div class="feature-box glass glow-card">
+                    <i class="fa-solid fa-users text-pink"></i>
+                    <h4>Multidões de NPCs</h4>
+                    <p>Milhares de pessoas com comportamentos únicos em eventos, praias e clubes.</p>
                 </div>
-                <div class="feature-box glass">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h4>Cultura Digital</h4>
-                    <p>Interface moderna de smartphone com paródias de redes sociais e mecânicas integradas.</p>
+                <div class="feature-box glass glow-card">
+                    <i class="fa-solid fa-water text-blue"></i>
+                    <h4>Oceanos & Hidrovia</h4>
+                    <p>Simulação avançada de ondas, surfe, barcos e física aquática.</p>
                 </div>
-                <div class="feature-box glass">
-                    <i class="fa-solid fa-water"></i>
-                    <h4>Física de Água e Clima</h4>
-                    <p>Simulação avançada de oceanos, tempestades tropicais e reflexos Ray-Tracing.</p>
+                <div class="feature-box glass glow-card">
+                    <i class="fa-solid fa-sun text-yellow"></i>
+                    <h4>Ray-Tracing Completo</h4>
+                    <p>Iluminação global e reflexos em tempo real sob o sol tropical de Vice City.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="galeria" class="section container">
-        <div class="section-header">
-            <h2>GALERIA DE <span class="gradient-text">IMAGENS</span></h2>
-            <div class="line-glow"></div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item glass placeholder-1">
-                <div class="gallery-caption">Vice Beach Sunset</div>
-            </div>
-            <div class="gallery-item glass placeholder-2">
-                <div class="gallery-caption">Downtown Vice City</div>
-            </div>
-            <div class="gallery-item glass placeholder-3">
-                <div class="gallery-caption">Leonida Wetlands</div>
-            </div>
-            <div class="gallery-item glass placeholder-4">
-                <div class="gallery-caption">Highway Speed</div>
             </div>
         </div>
     </section>
 
     <!-- Plataformas -->
-    <section id="plataformas" class="section bg-darker">
-        <div class="container text-center">
-            <div class="section-header">
-                <h2>PLATAFORMAS <span class="gradient-text">CONFIRMADAS</span></h2>
-                <div class="line-glow"></div>
+    <section id="plataformas" class="section container text-center">
+        <div class="section-header">
+            <h2>PLATAFORMAS <span class="gradient-text">CONFIRMADAS</span></h2>
+            <div class="line-glow"></div>
+        </div>
+        <div class="platform-cards">
+            <div class="platform-card glass glow-card">
+                <i class="fa-brands fa-playstation"></i>
+                <h3>PlayStation 5</h3>
+                <span class="platform-tag">Confirmado</span>
             </div>
-            <div class="platform-cards">
-                <div class="platform-card glass">
-                    <i class="fa-brands fa-playstation"></i>
-                    <h3>PlayStation 5</h3>
-                </div>
-                <div class="platform-card glass">
-                    <i class="fa-brands fa-xbox"></i>
-                    <h3>Xbox Series X | S</h3>
-                </div>
+            <div class="platform-card glass glow-card">
+                <i class="fa-brands fa-xbox"></i>
+                <h3>Xbox Series X | S</h3>
+                <span class="platform-tag">Confirmado</span>
             </div>
         </div>
     </section>
@@ -206,18 +321,19 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <span class="gta-title">GTA <span class="roman-vi">VI</span></span>
-                <p>Projeto Fan-Made sem fins lucrativos. Criado para demonstrar design web moderno inspirado na Rockstar Games.</p>
+                <p>Website conceitual fan-made criado para fãs da franquia GTA. Todos os direitos reservados à Rockstar Games.</p>
             </div>
             <div class="footer-links">
-                <h4>Links Rápidos</h4>
+                <h4>Navegação</h4>
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#trailer">Trailer</a></li>
+                    <li><a href="#personagens">Protagonistas</a></li>
+                    <li><a href="#social-feed">Leonida Live</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Siga a Rockstar</h4>
+                <h4>Comunidade Rockstar</h4>
                 <div class="social-icons">
                     <a href="https://twitter.com/RockstarGames" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://www.instagram.com/rockstargames" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -226,7 +342,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025-2026 Grand Theft Auto VI Fan Site. Todas as marcas registradas pertencem à Rockstar Games / Take-Two Interactive.</p>
+            <p>&copy; 2025-2026 Grand Theft Auto VI Fan Site | Vice City & Leonida</p>
         </div>
     </footer>
 
