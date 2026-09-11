@@ -1,0 +1,582 @@
+/* =========================================================
+   ESTILOS GERAIS & VARIÁVEIS (TEMA GTA VI VICE CITY)
+   ========================================================= */
+:root {
+    --bg-dark: #0b0712;
+    --bg-darker: #060309;
+    --primary-pink: #ff007f;
+    --primary-orange: #ff6600;
+    --primary-purple: #8b00ff;
+    --neon-blue: #00f0ff;
+    --text-color: #f1ecf7;
+    --text-muted: #a395b8;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-glow: rgba(255, 0, 127, 0.15);
+    --font-main: 'Poppins', sans-serif;
+    --font-title: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   UTILITÁRIOS & EFEITOS
+   ========================================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+/* Gradiente de Texto Assinatura do GTA VI (Rosa para Laranja) */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilo do VI */
+.roman-vi {
+    background: linear-gradient(180deg, #ff007f 0%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Efeito Glassmorphism */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.glass:hover {
+    border-color: rgba(255, 0, 127, 0.4);
+    box-shadow: 0 8px 32px 0 var(--glass-glow);
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, var(--primary-pink), var(--primary-orange));
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.7);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: transparent;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid var(--primary-pink);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 0, 127, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+/* Cabeçalhos de Seção */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.line-glow {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-orange));
+    margin: 15px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-pink);
+}
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(11, 7, 18, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gta-title {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-pink);
+}
+
+.btn-nav {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #2d0b3a 0%, #0b0712 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11,7,18,0.3) 0%, rgba(11,7,18,0.95) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+.badge {
+    background: rgba(255, 0, 127, 0.15);
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 20px 0;
+    line-height: 1.1;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.release-info {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.release-info strong {
+    color: var(--primary-orange);
+}
+
+/* =========================================================
+   SOBRE O JOGO
+   ========================================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   PERSONAGENS
+   ========================================================= */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.character-card {
+    overflow: hidden;
+}
+
+.char-img-placeholder {
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.char-lucia {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(11,7,18,0.9) 100%), 
+                linear-gradient(45deg, #ff007f, #8b00ff);
+}
+
+.char-jason {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(11,7,18,0.9) 100%), 
+                linear-gradient(45deg, #ff6600, #ff007f);
+}
+
+.char-tag {
+    background: #fff;
+    color: #000;
+    font-weight: 900;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.char-info {
+    padding: 30px;
+}
+
+.char-info h3 {
+    font-size: 1.8rem;
+    font-family: var(--font-title);
+}
+
+.char-role {
+    color: var(--primary-pink);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.char-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   LEONIDA & RECURSOS
+   ========================================================= */
+.leonida-banner {
+    padding: 60px;
+    background: linear-gradient(90deg, rgba(139, 0, 255, 0.1), rgba(255, 0, 127, 0.1));
+}
+
+.leonida-content h2 {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.neon-icon {
+    color: var(--primary-pink);
+    margin-right: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.feature-box {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.feature-box i {
+    font-size: 2rem;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+}
+
+.feature-box h4 {
+    margin-bottom: 10px;
+    font-family: var(--font-title);
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   GALERIA
+   ========================================================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.placeholder-1 { background: linear-gradient(135deg, #2b1055, #7597de); }
+.placeholder-2 { background: linear-gradient(135deg, #ff4e50, #f9d423); }
+.placeholder-3 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.placeholder-4 { background: linear-gradient(135deg, #8a2387, #e94057); }
+
+.gallery-caption {
+    font-weight: 700;
+    font-family: var(--font-title);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(-5px);
+    color: var(--primary-pink);
+}
+
+/* =========================================================
+   PLATAFORMAS
+   ========================================================= */
+.text-center { text-align: center; }
+
+.platform-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.platform-card {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.platform-card i {
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+    background-color: #030105;
+    border-top: 1px solid var(--glass-border);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-family: var(--font-title);
+    margin-bottom: 15px;
+    color: var(--primary-pink);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--primary-pink);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   RESPONSIVIDADE (MOBILE / TABLET)
+   ========================================================= */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        display: none; /* Em projetos avançados, pode-se incluir menu hambúrguer */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .leonida-banner {
+        padding: 30px;
+    }
+}
